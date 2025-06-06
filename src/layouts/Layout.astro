@@ -1,22 +1,50 @@
+---
+import Header from '../components/Header.astro';
+import '@fontsource-variable/onest';
+import Footer from '../components/Footer.astro';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={Astro.props.description} />
+		<meta name="keywords" content={Astro.props.keywords} />
+		<meta name="author" content={Astro.props.author} />
+		<title>{Astro.props.title}</title>
 	</head>
 	<body>
+		<div class="absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
-<style>
-	html,
+
+
+
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
+	},
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		background: #000;
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto !important;
+		}
 	}
 </style>
