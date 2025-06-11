@@ -1,6 +1,5 @@
 ---
 import Badge from '../components/Badge.astro';
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import LinkedinIcon from '../components/icons/Linkedin.astro';
 import GitHubIcon from '../components/icons/GitHub.astro';
@@ -22,11 +21,12 @@ import Projects from '../components/Projects.astro';
 	<main class="px-4 md:px-8 lg:px-12 xl:px-16">
 		<SectionContainer className="py-44 pb-32">
 			<img 
-			class="rounded-full size-12 mb-4" 
-			src="./src/assets/paraweb2.png" 
+			class="rounded-full size-60 mb-6 fade-up" 
+			style="animation-delay: 0.3s;"
+			src="./src/assets/javoru2.webp" 
 			alt="Javoru face"
 	    	/>
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl lg:pb-10 pb-6 font-bold flex flex-row gap-x-4 ">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl lg:pb-10 pb-6 font-bold flex flex-row gap-x-4 fade-up" style="animation-delay: 0.2s;">
 			Hey, soy Javier <a
 				href="https://www.linkedin.com/in/javiercastroretamal/"
 				target="_blank"
@@ -36,11 +36,12 @@ import Projects from '../components/Projects.astro';
 				<Badge> Disponible para trabajar</Badge>
 			</a>
 			</h1>
-			<h2 class="text-xl lg:text-2xl flex flex-row justify-center text-wrap max-w-[700apx] mt-2">
-				5 años de experiencia en el desarrollo web, Diseño web y Desarrollo de aplicaciones web. De Santiago de Chile 🆑
+			<h2 class="text-xl lg:text-2xl flex flex-row justify-center text-wrap max-w-[700px] mt-2 fade-up" style="animation-delay: 0.4s;">
+				1 año de experiencia en el desarrollo web, Diseño web y Gestión de proyectos. 
+				De Santiago de Chile 🆑
 			</h2>
 
-			<nav class="flex gap-x-4 mt-8 flex-wrap">
+			<nav class="flex gap-x-4 mt-8 flex-wrap fade-up" style="animation-delay: 0.6s;">
 					<SocialPill href="https://www.linkedin.com/in/javiercastroretamal/">
 						<LinkedinIcon class="size-4 lg:size-6" />
 						 LinkedIn
@@ -57,19 +58,20 @@ import Projects from '../components/Projects.astro';
 		</SectionContainer>
 		
 		<SectionContainer id="experiencia">
-			<h2 class="text-3xl flex gap-x-4  mt-2 justify-start items-center">
-				<Briefcase class="size-6 " />
+			<h2 class="text-3xl flex gap-x-4  mt-2 justify-start items-center fade-up" style="animation-delay: 0.2s;">
+				<Briefcase class="size-6" />
 				Experiencia Laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-3xl flex gap-x-4 mt-2 justify-start items-center mb-6">
+			<h2 class="text-3xl flex gap-x-4 mt-2 justify-start items-center mb-6 fade-up" style="animation-delay: 0.2s;">
 				<CodeIcon class="size-7 " />
 				Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
+
 	</main>
 </Layout>

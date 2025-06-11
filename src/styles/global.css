@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes border-animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-border-button {
+  position: relative;
+  background: transparent;
+  z-index: 1;
+  border: double 2px transparent;
+  border-radius: 14px;
+  background-image: linear-gradient(rgb(13, 17, 23), rgb(13, 17, 23)), 
+    linear-gradient(90deg, #60a5fa, #f472b6, #60a5fa);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 200% 200%;
+}
+
+.animated-border-button:hover {
+  animation: border-animate 4s ease infinite;
+}
+
